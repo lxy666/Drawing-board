@@ -53,11 +53,12 @@
 </ul>
 <script>
     var ul = document.getElementsByTagName('ul')[0];
+    //监听事件
     ul.onmouseover=function (e) {
         var event = e||window.event;
         var target = event.target||event.srcElement;//事件元对象
-        target.style.backgroundColor="rgb(255,255,"+target.getAttribute('img-data')+")";
-        target.setAttribute('img-data',parseInt(target.getAttribute('img-data'))+10);
+        target.style.backgroundColor="rgb(255,255,"+target.getAttribute('img-data')+")";//得到颜色值
+        target.setAttribute('img-data',parseInt(target.getAttribute('img-data'))+10);//改变颜色值
     }
 </script>
 </body>
